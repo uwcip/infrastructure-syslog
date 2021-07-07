@@ -1,7 +1,7 @@
 FROM debian:bullseye-slim@sha256:0ed82c5d1414eacc0e97fda5656ed03cc06ab91c26cdeb54388403e440599a60
 
 # github metadata
-LABEL org.opencontainers.image.source=https://github.com/uwcip/syslog-ng
+LABEL org.opencontainers.image.source=https://github.com/uwcip/infrastructure-syslog
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -q update && \
