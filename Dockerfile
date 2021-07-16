@@ -3,8 +3,9 @@ FROM debian:bullseye-slim@sha256:0ed82c5d1414eacc0e97fda5656ed03cc06ab91c26cdeb5
 # github metadata
 LABEL org.opencontainers.image.source=https://github.com/uwcip/infrastructure-syslog
 
+# install updates and dependencies
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get -q update && \
+RUN apt-get -q update && apt-get -y upgrade && \
     apt-get install -y --no-install-recommends syslog-ng && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
